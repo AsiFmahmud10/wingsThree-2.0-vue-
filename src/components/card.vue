@@ -16,27 +16,44 @@
       ></lottie-player>
     </div>
 
-    <div class="font-weight-bold " style="color:#e69b09">
+    <div class="font-weight-bold ml-2 " style="color:#e69b09">
       <p>name : {{ obj.name }}</p>
       <p>University : {{ obj.university }}</p>
       <p>Email : {{ obj.email }}</p>
-      <div class="d-flex justify-center flex-wrap"  >
-<v-btn width="167px" class="mr-2 mt-3 orange lighten-2 "  elevation="1" small x-small  justify="center" v-for="skill in obj.skills" :key="skill">{{ skill }}</v-btn>
-
-</div>
+      <div>
+        <div class="d-flex justify-center flex-wrap">
+          <v-btn
+            width="167px"
+            class="mr-2 mt-3 orange lighten-2 "
+            elevation="1"
+            small
+            x-small
+            justify="center"
+            v-for="skill in obj.skills"
+            :key="skill"
+            >{{ skill }}</v-btn
+          >
+        </div>
+      </div>
+      <div class="d-flex justify-end">
+        <router-link :to="{name:'Demo'}">
+          <v-btn color="success" class="mt-5 mx-2 ">{{id}} Demo </v-btn>
+          </router-link
+        >
+      </div>
     </div>
   </v-card>
 </template>
 
 <script>
 export default {
-  props: ["obj"],
+  props: ["obj","id"],
   data() {
+    return{
 
+    }
   },
-   mounted() {
-    
-    },
+  
 };
 </script>
 

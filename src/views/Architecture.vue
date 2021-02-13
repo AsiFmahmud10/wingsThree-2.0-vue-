@@ -1,8 +1,11 @@
 <template>
   
   <div><br>
-  <Card :obj="datas[id]"/>
+  why the hell i am not loading
+    {{game}}
+  <Card :obj="datas[id]" :id="id"/>
     <br><br>    
+  
   </div>
 </template>
 
@@ -11,17 +14,24 @@ import Card from "@/components/card.vue";
 export default {
   components: {Card},
   props:['id'],
-data() {
+data(){
   return {
           datas : [
               {id:"0",name: "Asif Mahmud", university : "Khulna university",email:"mhamudasif2@gmail.com",skills:['html','css','vue']},
                {id:"1",name: "Naim Imteaz", university : "Ruet",email:"imteazahamed710@gmail.com",skills:['Interior Design','Plan Design','Building Construction',"3D model"]},
                 {name: "Manosh kumar Barman", university : "NSU",email:"mhamudasif2@gmail.com",skills:['html','css','vue']},
 
-          ]
+          ],
+       game:"hosce na"
   }
+  
+},
+
+mounted() {
+  console.log('why ??')
 },
 }
+
 </script>
 
 <style scoped>

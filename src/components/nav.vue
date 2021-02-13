@@ -6,8 +6,8 @@
         <span class="font-weight-bold " style="color:rgb(239 83 80 / 89%)"  >WiNGS</span> THREE
       </v-toolbar-title>
       <v-spacer></v-spacer>
-       <v-btn text class="hidden-md-and-down " v-for="i in 3" :key="i" ><router-link :to="{name:'Architecture' , params:{id:i-1}}" >{{items[i-1].title}}</router-link></v-btn>
-       
+       <v-btn text  class="hidden-md-and-down " v-for="i in 3" :key="i" ><router-link :to="{name:'Architecture' , params:{id:i-1}}" >{{items[i-1].title}}</router-link></v-btn>
+           <v-btn text class="hidden-md-and-down "  ><router-link :to="{name:'Demo' }" >{{items[3].title}}</router-link></v-btn>
     </v-toolbar>
 
     <v-navigation-drawer app v-model="drawer">
@@ -51,6 +51,8 @@ export default {
         { title: "Architecture", icon: "", route: "/architecture" },
         { title: "Graphics Design", icon: "", route: "/graphics" },
         { title: "Web Development", icon: "", route: "/web" },
+        { title: "Demo", icon: "", route: "/demo" },
+        
       ],
       drawer: false,
     };

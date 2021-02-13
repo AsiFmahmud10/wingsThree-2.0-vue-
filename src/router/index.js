@@ -4,7 +4,7 @@ import Home from '../views/Home.vue'
 import Architecture from '@/views/Architecture.vue'
 import Graphics from '@/views/Graphics.vue'
 import Web from '@/views/Web.vue'
-
+import Demo from "@/views/Demo.vue"
 
 Vue.use(VueRouter)
 
@@ -24,6 +24,11 @@ const routes = [
     path: '/graphics',
     name: 'Graphics',
     component: Graphics
+  },
+  {
+    path: '/demo',
+    name: 'Demo',
+    component: Demo
   },
   {
     path: '/web',
